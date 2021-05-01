@@ -1,0 +1,14 @@
+@mixin buttonStyle {
+    width: auto;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: $mainColor;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        background-color: #005783;
+    }
+};

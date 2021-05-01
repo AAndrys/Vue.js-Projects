@@ -1,0 +1,212 @@
+.panel-container {
+    width: 100%;
+    height: 100%;
+}
+.main-panel-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    color: white;
+    flex-direction: column;
+    .top-options-container {
+        width: 100%;
+        max-height: 45px;
+        background-color: $mainColor;
+        padding: 10px;
+        margin-bottom: 50px;
+        overflow-y: hidden;
+        transition: all .2s linear;
+        .top-options-box {
+            .top-options-show {
+                width: 98%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 22px;
+                input {
+                    max-width: 200px;
+                    padding: 5px 10px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid white;
+                    color: white;
+                    font-size: 15px;
+                    outline: none;
+                }
+                .fa-search {
+                    margin: 0 10px;
+                    cursor: pointer;
+                }
+                button {
+                    font-size: 22px;
+                    background-color: transparent;
+                    border: none;
+                    color: white;
+                    padding: 0;
+                    margin: 0 10px;
+                    outline: none;
+                    .fa-chevron-down {
+                        cursor: pointer;
+                        transition: all .2s linear;
+                    }
+                }
+            }
+            .top-options {
+                width: 100%;
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    a {
+                        li {
+                            height: 30px;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            padding: 20px;
+                            font-weight: bold;
+                            &:hover {
+                                background-color: rgb(53, 53, 53);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-panel-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        .money-amount-box {
+            width: 40%;
+            min-width: 350px;
+            max-width: 800px;
+            height: 400px;
+            background-color: $mainColor;
+            border-radius: 10px;
+            margin: 0 10px;
+            .money-amount-content {
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .money-title-container {
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .money-amount-show {
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        font-size: 50px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .personal-info-box {
+            @extend .money-amount-box;
+            .personal-info-content {
+                @extend .money-amount-content;
+                .personal-title-container {
+                    @extend .money-title-container;
+                }
+                .personal-info-show {
+                    @extend .money-amount-show;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    p {
+                        font-size: 20px;
+                        font-weight: bold;
+                        span {
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+        .info-box {
+            @extend .money-amount-box;
+            width: 20%;
+            min-width: 300px;
+            max-width: 600px;
+            margin: 0 10px;
+            .info-server-content {
+                @extend .money-amount-content;
+                .info-server-title {
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .news-box {
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: column;
+                    .news-container {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        margin: 5px 0;
+                        padding: 0 10px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgb(53, 53, 53);
+                            transform: scale(1.05);
+                        }
+                        h3 {
+                            margin: 0;
+                        }
+                        p { 
+                            width: 100%;
+                            margin: 0;
+                            margin-bottom: 10px;
+                        }
+                        hr {
+                            width: 100%;
+                            border: 1px solid white;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-panel-container {
+        .bottom-panel-container {
+            flex-direction: column;
+            .money-amount-box {
+                margin-bottom: 50px;
+            }
+            .info-box {
+                width: 40%;
+                min-width: 350px;
+            }
+        }
+    }
+}

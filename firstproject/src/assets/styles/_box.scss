@@ -1,0 +1,16 @@
+.box-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: white;
+    position: relative;
+    .draggable-box {
+        width: 200px;
+        height: 200px;
+        background-color: saddlebrown;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: grab;
+    }
+}
